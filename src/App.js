@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { HocPage } from './pages/hoc_page';
 import { PresentationContainer } from './pages/presentation_container';
 import { ContextProvider } from './pages/context_provider';
-import { CompundComponents } from './pages/compund_components';
+import { CompoundComponents } from './pages/compound_components';
 
 export const App = () => {
   return (
@@ -21,8 +21,7 @@ export const App = () => {
             element={<HocPage />}
           ></Route>
           <Route
-            exact
-            path="/representationalcontainer"
+            path="/presentationcontainer"
             element={<PresentationContainer  />}
           ></Route>
           <Route
@@ -32,8 +31,8 @@ export const App = () => {
           ></Route>
           <Route
             exact
-            path="/compundcomponents"
-            element={<CompundComponents  />}
+            path="/compoundcomponents"
+            element={<CompoundComponents  />}
           ></Route>
         </Routes>
       </Router>

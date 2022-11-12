@@ -1,13 +1,10 @@
 import React from "react";
-export default function Todo({ title, completed }) {
-  function handleChange() {
-    //...
-  }
+export default function Todo({ title, completed, onChecked }) {
   return (
     <div>
       <div>
-        <input type="checkbox" checked={completed} onChange={handleChange} />
         {title}
+        <input type="checkbox" checked={completed} onClick={(e)=>onChecked(e)} />
       </div>
     </div>
   );

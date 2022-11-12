@@ -1,9 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import withSearch from "./../components/hoc/withSearch";
 import ProductList from "./../components/hoc/productList";
+import { Badge, Container, Row, Col } from "reactstrap";
+import TodoList from "./../components/hoc/todoList";
 
 export const HocPage = () => {
-  const products = [
+  const [todoWithSearch, setTodoWithSearch] = useState( );
+  const [products, setProducts] = useState([
     {
       id: 1,
       title: "Wasabi Paste",
@@ -44,8 +47,8 @@ export const HocPage = () => {
       id: 10,
       title: "Muffin - Blueberry Individual",
     },
-  ];
-  const todos = [
+  ]);
+  const [todos, setTodos] = useState([
     {
       id: 1,
       title: "InterdumMaurisUllamcorper.xls",
@@ -96,13 +99,33 @@ export const HocPage = () => {
       title: "TellusInSagittis.mp3",
       completed: true,
     },
-  ];
+  ]);
 
   const ProductWithSearch = withSearch(ProductList, products);
-  const TodoWithSearch = withSearch(ProductList, todos);
+  const TodoWithSearch = withSearch(TodoList, todos, 
+    {
+      onChecked: (e, id) => {
+        const newTodos = todos;
+        console.log('todoSelected', newTodos[id-1])
+        newTodos[id-1].completed =  !newTodos[id-1].completed;
+        console.log('todoModified', newTodos[id-1])
+        setTodos(newTodos);
+        console.log('newTodos', todos)
+      },
+    },
+  );
   return (
     <Fragment>
       <Container fluid>
+        <Row>
+          <Col md="12">
+            <div className="text-center m-3">
+              <Badge color="secondary" className="m-auto">
+                <h3>HOCs (High order components)</h3>
+              </Badge>
+            </div>
+          </Col>
+        </Row>
         <Row>
           <Col md="6">
             <ProductWithSearch></ProductWithSearch>

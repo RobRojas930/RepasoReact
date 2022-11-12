@@ -1,8 +1,8 @@
 import React from "react";
 import Todo from "./todo";
-import { filterItems } from "./utils";
+import { filterItems, checkedItems } from "./utils";
 
-export default function TodoList({ query, dataset }) {
+export default function TodoList({ query, dataset, onChecked }) {
   const items = filterItems(query, dataset);
   return (
     <div>
@@ -11,6 +11,9 @@ export default function TodoList({ query, dataset }) {
           key={product.id}
           title={product.title}
           completed={product.completed}
+          onChecked={(e) => {
+            onChecked(e, product.id);
+          }}
         />
       ))}
     </div>

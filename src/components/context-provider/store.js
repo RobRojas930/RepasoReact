@@ -1,8 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
-
+import React, { createContext, useContext, useEffect, useState } from "react";
 // 1. Definicion de contexto
 const AppContext = createContext({
-  items: [],
+  items: [
+    
+  ],
   onComplete: (id) => {},
 });
 

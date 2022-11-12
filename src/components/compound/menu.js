@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import Store, { useAppContext } from "./store";
 
 export default function Menu({ children }) {

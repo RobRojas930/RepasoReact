@@ -8,6 +8,7 @@ module.exports = {
   mode: isProd ? "production" : "development",
   output: {
     filename: "app.bundle.js",
+    publicPath: '/'
   },
   resolve: {
     extensions: [".js"],
@@ -35,6 +36,9 @@ module.exports = {
       ],
     }),
   ],
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     rules: [
       {

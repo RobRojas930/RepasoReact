@@ -1,4 +1,6 @@
+import React from "react";
 import { useAppContext } from "./store";
+
 export default function Todo({ id, title, completed }) {
   const store = useAppContext();
   return (

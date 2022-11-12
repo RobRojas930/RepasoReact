@@ -1,3 +1,4 @@
+import React from 'react'
 export default function Todo({ id, title, completed, onCompleted }) {
   return (
     <div>
