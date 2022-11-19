@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Badge, Container, Row, Col } from "reactstrap";
-import Menu from "../components/compound/menu";
+import Menu from "../../components/compound/menu";
 export const CompoundComponents = () => {
   return (
     <Fragment>

@@ -1,0 +1,95 @@
+{
+  "mainMenu": [
+    {
+      "title": "Hooks",
+      "url": "/hooks_page"
+    },
+    {
+      "title": "Patrones de diseño",
+      "url": "/design_patern_page",
+      "subMenu": {}
+    },
+    {
+      "title": "React Básico",
+      "url": "/basics_page"
+    }
+  ],
+  "hooksMenu": [
+    {
+      "title": "UseState",
+      "url": "/hooks/usestate"
+    },
+    {
+      "title": "UseEffect",
+      "url": "/hooks/useeffect"
+    },
+    {
+      "title": "UseLayouteffect",
+      "url": "/hooks/uselayouteffect"
+    },
+    {
+      "title": "UseMemo",
+      "url": "/hooks/usememo"
+    },
+    {
+      "title": "UseCallback",
+      "url": "/hooks/usecallback"
+    },
+    {
+      "title": "UseRef",
+      "url": "/hooks/useref"
+    },
+    {
+      "title": "UseReducer",
+      "url": "/hooks/usereducer"
+    },
+    {
+      "title": "UseContext",
+      "url": "/hooks/usecontext"
+    }
+  ],
+  "designPatternMenu": [
+    {
+      "title": "Hoc",
+      "url": "/patterns/hoc"
+    },
+    {
+      "title": "Presentation Container",
+      "url": "/patterns/presentationcontainer"
+    },
+    {
+      "title": "Context Provider",
+      "url": "/patterns/contextprovider"
+    },
+    {
+      "title": "Compound Components",
+      "url": "/patterns/compoundcomponents"
+    }
+  ],
+  "basicsMenu": [
+    {
+      "title": "Compo Nentpage",
+      "url": "/basics/componentpage"
+    },
+    {
+      "title": "React Lifecycle",
+      "url": "/basics/reactlifecycle"
+    },
+    {
+      "title": "React Props",
+      "url": "/basics/reactprops"
+    },
+    {
+      "title": "React Rendercond",
+      "url": "/basics/reactrendercond"
+    },
+    {
+      "title": "React State",
+      "url": "/basics/reactstate"
+    },
+    {
+      "title": "Styled components",
+      "url": "/basics/styledcomponents"
+    }
+  ]
+}

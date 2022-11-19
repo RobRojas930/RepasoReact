@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
-import withSearch from "./../components/hoc/withSearch";
-import ProductList from "./../components/hoc/productList";
+import withSearch from "../../components/hoc/withSearch";
+import ProductList from "../../components/hoc/productList";
 import { Badge, Container, Row, Col } from "reactstrap";
-import TodoList from "./../components/hoc/todoList";
+import TodoList from "../../components/hoc/todoList";
 
 export const HocPage = () => {
   const [todoWithSearch, setTodoWithSearch] = useState( );

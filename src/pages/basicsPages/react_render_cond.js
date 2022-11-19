@@ -1,6 +1,6 @@
 import React from 'react'
-import ImageSlider from '../components/react-basics/image-slider';
-export class ReactRenderCond extends Component {
+import ImageSlider from './../../components/react-basics/image-slider';
+export class ReactRenderCond extends React.Component {
     state = {
       visible: true,
       whichComponentToShow: "ImageSlider"

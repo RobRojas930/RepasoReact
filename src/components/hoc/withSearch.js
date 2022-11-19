@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-export default function withSearch(Component, dataset, other) {
+export default function withSearch(Element, dataset, other) {
   return function () {
     const [query, setQuery] = useState("");
 
@@ -10,7 +10,7 @@ export default function withSearch(Component, dataset, other) {
     return (
       <div>
         <input onChange={handleChange} value={query} />
-        <Component query={query} dataset={dataset}  {...other}/>
+        <Element query={query} dataset={dataset}  {...other}/>
       </div>
     );
   };

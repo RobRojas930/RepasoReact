@@ -1,11 +1,9 @@
 import "regenerator-runtime/runtime";
-import React, { Component } from "react";
+import React from "react";
 import { Product } from "../product/product";
 import { Col, Container, Row } from "reactstrap";
-import Store from "../../utils/store";
-const store = new Store();
 
-export class ListOfProducts extends Component {
+export class ListOfProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

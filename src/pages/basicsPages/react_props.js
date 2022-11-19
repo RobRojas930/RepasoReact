@@ -23,7 +23,7 @@ const Body = (props) => (
 //   );
 // }
 
-class Header extends Component {
+class Header extends React.Component {
   render() {
     return (
       <header className="App-header">

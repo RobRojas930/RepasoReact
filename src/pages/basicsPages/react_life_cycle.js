@@ -1,5 +1,5 @@
 import React from "react";
-import Counter from './../components/react-basics/counter';
+import Counter from '../../components/react-basics/counter';
 
 export const ReactLifeCycle = () => {
   return (
