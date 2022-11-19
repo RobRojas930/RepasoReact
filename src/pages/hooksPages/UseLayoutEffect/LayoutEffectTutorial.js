@@ -1,19 +1,20 @@
-import { useLayoutEffect, useEffect, useRef } from "react";
+import React, { useLayoutEffect, useEffect, useRef } from "react";
 
 function LayoutEffectTutorial() {
-  const inputRef = useRef(null);
+  const inputRef = useRef('');
 
   useLayoutEffect(() => {
     console.log(inputRef.current.value);
+    inputRef.current.value = "HELLO";
   }, []);
 
   useEffect(() => {
-    inputRef.current.value = "HELLO";
+    inputRef.current.value = "THERE";
   }, []);
 
   return (
     <div className="App">
-      <input ref={inputRef} value="PEDRO" style={{ width: 400, height: 60 }} />
+      <input ref={inputRef} value={inputRef.current.value} style={{ width: 400, height: 60 }} />
     </div>
   );
 }

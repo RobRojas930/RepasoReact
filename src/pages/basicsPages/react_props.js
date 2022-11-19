@@ -24,6 +24,11 @@ const Body = (props) => (
 // }
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
   render() {
     return (
       <header className="App-header">

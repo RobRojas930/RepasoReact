@@ -11,7 +11,7 @@ export const ViewPage = ({ children }) => {
   return (
     <Container fluid>
       <Row>
-        <Col md={12}>{}children</Col>
+        <Col md={12}>{}{children}</Col>
       </Row>
     </Container>
   );

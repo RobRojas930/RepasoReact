@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const StateTutorial = () => {
-  const [inputValue, setInputValue] = useState("Pedro");
+  const [inputValue, setInputValue] = useState("Rob");
 
   let onChange = (event) => {
     const newValue = event.target.value;
@@ -10,7 +10,7 @@ const StateTutorial = () => {
 
   return (
     <div>
-      <input placeholder="enter something..." onChange={onChange} />
+      <input placeholder="escribe algo" onChange={onChange} />
       {inputValue}
     </div>
   );

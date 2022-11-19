@@ -2,16 +2,20 @@
   "mainMenu": [
     {
       "title": "Hooks",
-      "url": "/hooks_page"
+      "url": "/hooks"
     },
     {
       "title": "Patrones de diseño",
-      "url": "/design_patern_page",
+      "url": "/patterns",
       "subMenu": {}
     },
     {
       "title": "React Básico",
-      "url": "/basics_page"
+      "url": "/basics"
+    },
+    {
+      "title": "Home",
+      "url": "/"
     }
   ],
   "hooksMenu": [
@@ -29,7 +33,7 @@
     },
     {
       "title": "UseMemo",
-      "url": "/hooks/usememo"
+      "url": "/hooks/memo"
     },
     {
       "title": "UseCallback",
@@ -46,6 +50,10 @@
     {
       "title": "UseContext",
       "url": "/hooks/usecontext"
+    },
+    {
+      "title": "Home",
+      "url": "/"
     }
   ],
   "designPatternMenu": [
@@ -64,6 +72,10 @@
     {
       "title": "Compound Components",
       "url": "/patterns/compoundcomponents"
+    },
+    {
+      "title": "Home",
+      "url": "/"
     }
   ],
   "basicsMenu": [
@@ -90,6 +102,10 @@
     {
       "title": "Styled components",
       "url": "/basics/styledcomponents"
+    },
+    {
+      "title": "Home",
+      "url": "/"
     }
   ]
 }

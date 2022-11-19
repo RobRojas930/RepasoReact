@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
-export default function MemoTutorial() {
+const MemoTutorial = () => {
   const [data, setData] = useState(null);
   const [toggle, setToggle] = useState(false);
 
@@ -32,7 +32,7 @@ export default function MemoTutorial() {
   const getLongestName = useMemo(() => findLongestName(data), [toggle]);
 
   return (
-    <div className="App">
+    <div>
       <div> {getLongestName} </div>
 
       <button
@@ -47,3 +47,4 @@ export default function MemoTutorial() {
     </div>
   );
 }
+export default MemoTutorial;

@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo  from './../../res/logo.png';
 const Body = () => (
   <p className="App-intro">
     To get started, edit <code>src/App.js</code> and save to reload.
@@ -22,6 +22,12 @@ const Body = () => (
 // }
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+    };
+  }
   render() {
     return (
       <header className="App-header">
@@ -34,9 +40,9 @@ class Header extends React.Component {
 
 export const ComponentPage = () => {
   return (
-    <Fragment>
+    <React.Fragment>
       <Header />
       <Body />
-    </Fragment>
+    </React.Fragment>
   );
 };

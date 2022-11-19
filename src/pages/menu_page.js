@@ -6,20 +6,26 @@ import {
   Card,
   CardTitle,
   Button,
+  Label,
 } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
 const MenuItem = ({ title, url }) => {
   const navigate = useNavigate();
-  <Card key={title} body>
-    <CardTitle tag="h5">{title}</CardTitle>
-    <Button onClick={() => navigate(url)}>IR</Button>
-  </Card>;
+  return (
+    <Card key={title} body>
+      <CardTitle tag="h5">{title}</CardTitle>
+      <Button onClick={() => navigate(url)}>IR</Button>
+    </Card>
+  );
 };
 
-export const MenuPage = ({items}) => {
+export const MenuPage = ({ name, items }) => {
   return (
     <Container fluid>
+      <Row>
+        <Label className="h2">{name}</Label>
+      </Row>
       <Row>
         {items.map((item) => (
           <Col key={item.title} md="3">
