@@ -1,5 +1,5 @@
 import axios from "axios";
-import  React, { useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 import Child from "./Child";
 
 export default function CallBackTutorial() {
@@ -8,24 +8,23 @@ export default function CallBackTutorial() {
 
   const returnComment = useCallback(
     (name) => {
-      return data + name;
+      return  data + name;
     },
     [data]
   );
 
   return (
-    <div className="App">
-      <Child returnComment={returnComment} />
-
+    <div>
+      <Child returnComment={returnComment}/>
       <button
         onClick={() => {
           setToggle(!toggle);
         }}
       >
-        {" "}
         Toggle
       </button>
-      {toggle && <h1> toggle </h1>}
+      <button onClick={()=>setData("COME ON VIEJO ")}>CAMBIAR DATA</button>
+      {toggle && <h1> {data} </h1>}
     </div>
   );
 }

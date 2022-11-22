@@ -9,6 +9,7 @@ const MemoTutorial = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/comments")
       .then((response) => {
+        console.log("comentarios", response.data);
         setData(response.data);
       });
   }, []);
@@ -23,8 +24,7 @@ const MemoTutorial = () => {
         longestName = currentName;
       }
     }
-
-    console.log("THIS WAS COMPUTED");
+    console.log("Se ha procesado");
 
     return longestName;
   };
@@ -37,14 +37,20 @@ const MemoTutorial = () => {
 
       <button
         onClick={() => {
+          setToggle(toggle);
+        }}
+      >
+        Load
+      </button>
+      <button
+        onClick={() => {
           setToggle(!toggle);
         }}
       >
-        {" "}
-        Toggle
+        Activar
       </button>
-      {toggle && <h1> toggle </h1>}
+      {toggle && <h1> {getLongestName} </h1>}
     </div>
   );
-}
+};
 export default MemoTutorial;

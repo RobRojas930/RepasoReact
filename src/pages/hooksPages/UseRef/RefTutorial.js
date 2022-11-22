@@ -1,16 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 function RefTutorial() {
+  const [name, setName] = useState("Rob");
   const inputRef = useRef(null);
 
-  const onClick = () => {
+  const reset = () => {
     inputRef.current.value = "";
+    setName(inputRef.current.value);
   };
+  const update = () => {
+    setName(inputRef.current.value);
+  };
+  
   return (
     <div>
-      <h1>Pedro</h1>
-      <input type="text" placeholder="Ex..." ref={inputRef} />
-      <button onClick={onClick}>Change Name</button>
+      <h1>{name}</h1>
+      <input type="text" placeholder="Escriba un nombre..." ref={inputRef} />
+      <button onClick={reset}>Reset</button>
+      <button onClick={update}>Actualizar</button>
     </div>
   );
 }

@@ -106,11 +106,8 @@ export const HocPage = () => {
     {
       onChecked: (e, id) => {
         const newTodos = todos;
-        console.log('todoSelected', newTodos[id-1])
         newTodos[id-1].completed =  !newTodos[id-1].completed;
-        console.log('todoModified', newTodos[id-1])
         setTodos(newTodos);
-        console.log('newTodos', todos)
       },
     },
   );
