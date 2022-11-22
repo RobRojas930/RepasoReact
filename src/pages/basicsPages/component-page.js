@@ -5,21 +5,7 @@ const Body = () => (
     To get started, edit <code>src/App.js</code> and save to reload.
   </p>
 );
-// const Body = () => {
-//   return (
-//     <p className="App-intro">
-//       To get started, edit <code>src/App.js</code> and save to reload.
-//     </p>
-//   );
-// };
 
-// function Body() {
-//   return (
-//     <p className="App-intro">
-//       To get started, edit <code>src/App.js</code> and save to reload.
-//     </p>
-//   );
-// }
 
 class Header extends React.Component {
   constructor(props) {

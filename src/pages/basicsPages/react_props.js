@@ -1,64 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Body = (props) => (
-  <div>
-    <p className="App-intro">{props.text}</p>
-    <p className="App-intro">{props.text2}</p>
-    <p className="App-intro">{props.myFunc(1, 2)}</p>
-  </div>
-);
-// const Body = () => {
-//   return (
-//     <p className="App-intro">
-//       To get started, edit <code>src/App.js</code> and save to reload.
-//     </p>
-//   );
-// };
-
-// function Body() {
-//   return (
-//     <p className="App-intro">
-//       To get started, edit <code>src/App.js</code> and save to reload.
-//     </p>
-//   );
-// }
+const Body = ({ text, operation, children }) => {
+  const [show, setShow] = useState(false);
+  return (
+    <div>
+      <p>{text}</p>
+      <button
+        className={`button btn ${show ? "btn-danger" : "btn-success"} `}
+        onClick={() => {
+          const newShow = !show;
+          setShow(newShow);
+          operation(newShow);
+        }}
+      >
+        {show ? <b>Ocultar</b> : <b>Mostrar</b>}
+      </button>
+      {children}
+    </div>
+  );
+};
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
   render() {
     return (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">{this.props.title}</h1>
-        <div>{this.props.myFunc(10, 12)}</div>
+      <header>
+        <h1>{this.props.title}</h1>
+        <b>Este es el resultado de la operacion: </b>
+        <div>{this.props.operation(10, 12)}</div>
       </header>
     );
   }
 }
 
 export const ReactProps = () => {
-    const add = (a, b) => {
-        return a +b;
-    }
-    return (
+  const [visible, setVisible] = useState(false);
+
+  const sum = (a, b) => {
+    return a + b;
+  };
+  const res = (a, b) => {
+    return a - b;
+  };
+
+  return (
     <div>
-      {" "}
-      <Header
-        title={"Hello"}
-        num={7}
-        myArr={[10, 2, 3]}
-        myFunc={add}
-        myObj={{
-          a: 5,
-          b: 6,
-        }}
-      />
-      <Body myFunc={this.add} text="i am cool" text2="i am cool2" />
-      <Body myFunc={this.add} text="i am" text2="i cool2" />
+      {visible ? <Header title={"Hola a todos"} operation={res} /> : <></>}
+      <Body text="Esto es un props" operation={setVisible}>
+        {visible == true ? (
+          <strong className="bg-success rounded text-white  p-3">
+            Esto es el contenido del body
+          </strong>
+        ) : (
+          <></>
+        )}
+      </Body>
     </div>
   );
 };

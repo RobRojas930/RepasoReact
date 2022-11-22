@@ -6,8 +6,7 @@
     },
     {
       "title": "Patrones de diseño",
-      "url": "/patterns",
-      "subMenu": {}
+      "url": "/patterns"
     },
     {
       "title": "React Básico",

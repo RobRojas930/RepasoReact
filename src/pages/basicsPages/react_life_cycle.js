@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Counter from "../../components/react-basics/counter";
+import { Counter2 } from "./../../components/react-basics/counter";
 
 export class ReactLifeCycle extends React.Component {
   constructor(props) {
@@ -11,15 +12,15 @@ export class ReactLifeCycle extends React.Component {
   render() {
     return (
       <div>
-        <div className={this.state.visible ? "visible" : "hidden"}>
-          <Counter />
+        <div className={this.state.visible ? "d-inline-block" : "d-none"}>
+          <Counter2 />
         </div>
         <button
           onClick={() => {
             this.setState({ visible: !this.state.visible });
           }}
         >
-          toggle counter
+          {this.state.visible ? <b>Ocultar</b> : <b>Ver</b>}
         </button>
       </div>
     );
